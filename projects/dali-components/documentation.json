@@ -6,10 +6,55 @@
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [],
+    "components": [
+        {
+            "name": "WrapperComponent",
+            "id": "component-WrapperComponent-443afeda166d7ca8b176f5d4109a87bc33cd158abe84ad9c19565e86e42948fbfe946ce065a0f315f0117319c3cf4baf25ca0696b041c96f3c9872be11ed82c2",
+            "file": "projects/dali-components/src/lib/components/link.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "styleUrls": [],
+            "styles": [],
+            "template": "<a href=\"#\" dlLink>Link</a>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';\nimport { fn } from '@storybook/test';\nimport { DlLinkDirective } from './link.directive';\nimport { Component } from '@angular/core';\n\n@Component({\n  // Este componente actúa como un envoltorio para la directiva\n  template: `<a href=\"#\" dlLink>Link</a>`,\n})\nclass WrapperComponent {}\n\nexport default {\n  title: 'Buttons/ Link',\n  component: WrapperComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [DlLinkDirective, WrapperComponent], // Declara la directiva aquí\n    }),\n  ],\n  tags: ['autodocs'],\n  args: { onClick: fn() },\n  parameters: {\n    docs: {\n      description: {\n        component: `\n          ## Código de uso de la directiva\n\n          ## Ejemplo de uso en HTML\n\n          \\`\\`\\`html\n          <a href=\"#\" dlLink [size]=\"'md'\" [variant]=\"'default'\" [iconDirection]=\"'right'\">Link</a>\n          \\`\\`\\`\n        `,\n      },\n    },\n  },\n} as Meta;\n\nexport const Default = (args: any) => ({\n  Component: WrapperComponent,\n  props: args,\n});\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        }
+    ],
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/dali-components/src/lib/components/link.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args: any) => ({\n  Component: WrapperComponent,\n  props: args,\n})"
+            },
             {
                 "name": "Large",
                 "ctype": "miscellaneous",
@@ -169,6 +214,18 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/dali-components/src/lib/components/link.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/dali-components/src/lib/components/link.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args: any) => ({\n  Component: WrapperComponent,\n  props: args,\n})"
+                }
+            ],
             "projects/dali-components/src/stories/button.stories.ts": [
                 {
                     "name": "Large",
@@ -353,6 +410,25 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dali-components/src/lib/components/link.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "WrapperComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/dali-components/src/lib/components/link.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
